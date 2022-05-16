@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jhurst16/puppeteer-practice#readme",
   "dependencies": {
+    "node-cron": "^3.0.0",
     "puppeteer": "^14.1.0"
   }
 }

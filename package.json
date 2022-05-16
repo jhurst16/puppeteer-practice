@@ -1,0 +1,23 @@
+{
+  "name": "puppeteer-practice",
+  "version": "1.0.0",
+  "description": "Practicing scraping data using puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhurst16/puppeteer-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhurst16/puppeteer-practice/issues"
+  },
+  "homepage": "https://github.com/jhurst16/puppeteer-practice#readme",
+  "dependencies": {
+    "puppeteer": "^14.1.0"
+  }
+}

@@ -18,6 +18,21 @@ async function start() {
   const clickedData = await page.$eval("#data", (el) => el.textContent);
   console.log(clickedData);
 
+  const photos = await page.$$eval("img", (imgs) => {
+    return imgs.map((x) => x.src);
+  });
+
+  await page.type("#ourfield", "blue");
+  await Promise.all([page.click("#ourform button"), page.waitForNavigation()]);
+  const info = await page.$eval("#message", (el) => el.textContent);
+
+  console.log(info);
+
+  for (const photo of photos) {
+    const imagepage = await page.goto(photo);
+    await fs.writeFile(photo.split("/").pop(), await imagepage.buffer());
+  }
+
   await browser.close();
 }
 
